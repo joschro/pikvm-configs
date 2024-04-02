@@ -1,0 +1,92 @@
+kvmd:
+    gpio:
+        drivers:
+            ez1:
+                type: ezcoo
+                device: /dev/ttyUSB0
+            ez2:
+                type: ezcoo
+                device: /dev/ttyUSB1
+        scheme:
+            ch0_led:
+                driver: ez1
+                pin: 0
+                mode: input
+            ch1_led:
+                driver: ez1
+                pin: 1
+                mode: input
+            ch2_led:
+                driver: ez1
+                pin: 2
+                mode: input
+            ch3_led:
+                driver: ez1
+                pin: 3
+                mode: input
+            ch4_led:
+                driver: ez2
+                pin: 0
+                mode: input
+            ch5_led:
+                driver: ez2
+                pin: 1
+                mode: input
+            ch6_led:
+                driver: ez2
+                pin: 2
+                mode: input
+            ch7_led:
+                driver: ez2
+                pin: 3
+                mode: input
+            ch0_button:
+                driver: ez1
+                pin: 0
+                mode: output
+                switch: false
+            ch1_button:
+                driver: ez1
+                pin: 1
+                mode: output
+                switch: false
+            ch2_button:
+                driver: ez1
+                pin: 2
+                mode: output
+                switch: false
+            ch3_button:
+                driver: ez1
+                pin: 3
+                mode: output
+                switch: false
+            ch4_button:
+                driver: ez2
+                pin: 0
+                mode: output
+                switch: false
+            ch5_button:
+                driver: ez2
+                pin: 1
+                mode: output
+                switch: false
+            ch6_button:
+                driver: ez2
+                pin: 2
+                mode: output
+                switch: false
+            ch7_button:
+                driver: ez2
+                pin: 3
+                mode: output
+                switch: false
+        view:
+            table:
+                - ["#Input 1", ch0_led, ch0_button]
+                - ["#Input 2", ch1_led, ch1_button]
+                - ["#Input 3", ch2_led, ch2_button]
+                - ["#Input 4", ch3_led, ch3_button]
+                - ["#Input 5", ch4_led, ch4_button]
+                - ["#Input 6", ch5_led, ch5_button]
+                - ["#Input 7", ch6_led, ch6_button]
+                - ["#Input 8", ch7_led, ch7_button]
